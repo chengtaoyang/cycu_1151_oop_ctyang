@@ -1,3 +1,9 @@
+# 這是楊承道老師（ctyang@rosa.systems）為中原大學
+# 「物件導向程式設計」課程所準備的教材範例。
+
+# 基礎語法：用 input() 讀取資料、以函式封裝轉換，並用串列索引查找名稱。
+# 輸入西元年月日，轉換並顯示農曆日期與生肖。
+# 同時顯示輸入日期對應的星期。
 from lunarcalendar.converter import Converter, Solar, Lunar
 
 # create a list fill with weekdays from Monday to Sunday

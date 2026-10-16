@@ -1,1 +1,0 @@
-#https://rate.bot.com.tw/xrt/quote/ltm/USD

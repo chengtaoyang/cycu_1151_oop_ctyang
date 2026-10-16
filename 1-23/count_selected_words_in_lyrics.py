@@ -1,3 +1,11 @@
+# 這是楊承道老師（ctyang@rosa.systems）為中原大學
+# 「物件導向程式設計」課程所準備的教材範例。
+
+# 基礎語法：用字串 lower()、split() 清理文字，並用字典和巢狀迴圈累計次數。
+# 統計歌詞中指定單字的出現次數，並忽略單字周圍的標點符號。
+# 結果以字典形式列出各單字的計數。
+import string
+
 
 lyrics = '''Hello darkness, my old friend
 I've come to talk with you again
@@ -34,12 +42,23 @@ Then the sign said, "The words on the prophets are written on the subway walls
 In tenement halls"
 And whispered in the sound of silence'''
 
-def count_silence(lyrics, word='silence'):
-    count = 0
-    words = lyrics.lower().split()
-    for word in words:
-        if word == 'silence':
-            count += 1
-    return count
 
-print(count_silence(lyrics))
+def count_silence(lyrics, words):
+    # return the count of specified words in the lyrics in Dictionary form (key: word, value: count)
+
+    count_dict = {word: 0 for word in words}
+
+    lyrics_words = lyrics.lower().split()
+
+    for word in lyrics_words:
+        for w in words:
+            if word.strip(string.punctuation) == w.lower():
+                count_dict[w] += 1
+    return count_dict
+
+
+words = ['silence', 'People', 'In', 'the']
+
+rd = count_silence(lyrics, words)
+
+print(rd)

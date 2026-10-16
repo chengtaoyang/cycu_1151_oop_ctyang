@@ -1,4 +1,10 @@
-#exercis 9.15.3
+# 這是楊承道老師（ctyang@rosa.systems）為中原大學
+# 「物件導向程式設計」課程所準備的教材範例。
+
+# 基礎語法：用函式處理字串，透過 reversed() 與 join() 反轉，再以條件和迴圈篩選。
+# 示範反轉字串，並找出字數至少七個字母的迴文。
+# 迴文正讀與反讀相同。
+# exercis 9.15.3
 #Python provides a built-in function called reversed that takes as an argument a sequence of elements – like a list or string – and returns a reversed object that contains the elements in reverse order.
 
 arg = reversed('parrot')
